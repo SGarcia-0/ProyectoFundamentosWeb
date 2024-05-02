@@ -1,4 +1,4 @@
-
+//Codigo temporal mayormente realizado con ia
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById('productForm');
     const productNameInput = document.getElementById('productName');
@@ -7,12 +7,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const productCodeInput = document.getElementById('productCode');
     const additionalFieldsDiv = document.getElementById('additionalFields');
 
-    // Opciones de categoría
-    const categorias = ["Instrumento", "Accesorios", "Cabello", "Uñas"];
+    const categorias = ["Instrumento", "Accesorios",];
 
-    // Función para agregar campos adicionales según la categoría seleccionada
     function addAdditionalFields(category) {
-        additionalFieldsDiv.innerHTML = ''; // Limpiar campos adicionales antes de agregar nuevos
+        additionalFieldsDiv.innerHTML = ''; 
 
         if (category === 'Instrumento') {
             const InstrumentoFields = `
@@ -28,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
             `;
             additionalFieldsDiv.innerHTML = InstrumentoFields;
         } else if (category === 'Accesorios') {
-            const cuidadoPielFields = `
+            const AccesoriosPielFields = `
             <div class="form-group">
             <label for="shade">Marca</label>
             <input type="text" class="form-control" id="shade" placeholder="Ingrese la Marca">
@@ -38,21 +36,21 @@ document.addEventListener("DOMContentLoaded", function() {
             <input type="text" class="form-control" id="finish" placeholder="Ingrese la Descripcion">
         </div><br>
             `;
-            additionalFieldsDiv.innerHTML = cuidadoPielFields;
+            additionalFieldsDiv.innerHTML = AccesoriosFields;
         
         }
     }
 
-    // Evento de cambio en la selección de categoría
+   
     categorySelect.addEventListener('change', function() {
         addAdditionalFields(this.value);
     });
 
-    // Agregar evento de envío del formulario
+   
     form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Evitar que se envíe el formulario por defecto
+        event.preventDefault(); 
 
-        // Validar campos
+        
         if (productNameInput.value.trim() === '') {
             alert('Por favor, ingrese el nombre del producto.');
             productNameInput.focus();
@@ -77,12 +75,12 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
-        // Agregar más validaciones según sea necesario
+       
 
         // Si todo está bien, enviar el formulario
         alert('¡Producto registrado con éxito!');
         form.reset(); // Limpiar campos
-        additionalFieldsDiv.innerHTML = ''; // Limpiar campos adicionales después de enviar
+        additionalFieldsDiv.innerHTML = ''; 
     });
 
     document.getElementById("registroLink").addEventListener("click", function(event){
