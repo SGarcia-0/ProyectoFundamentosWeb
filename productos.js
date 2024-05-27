@@ -1,7 +1,26 @@
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+    
+        this.classList.toggle("active");
+
+      
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
 document.addEventListener('DOMContentLoaded', function() {
   const productos = [
     {
       id: 1,
+      clase:"instrumento",
       nombre: "Guitarra Eléctrica Yamaha PAC112J Natural",
       precio: 1350000,
       imagenes: ["resources/images/productos/Instrumentos/Yamaha1.jpg"],
@@ -9,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     {
       id: 2,
+      clase:"instrumento",
       nombre: "Bajo Eléctrico Squier Affinity Precision Bass PJ",
       precio: 899000,
       imagenes: ["resources/images/productos/Instrumentos/bajo1.webp"],
@@ -16,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     {
       id: 3,
+      clase:"instrumento",
       nombre: "Teclado Yamaha PSR-E373",
       precio: 1249000,
       imagenes: ["resources/images/productos/Instrumentos/teclado1.jpg"],
@@ -23,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     {
       id: 4,
+      clase:"instrumento",
       nombre: "Batería Acústica Pearl Export ELX",
       precio: 3299000,
       imagenes: ["resources/images/productos/Instrumentos/bateria1.jpg"],
@@ -30,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     {
       id: 5,
+      clase:"instrumento",
       nombre: "Ukelele Soprano Kala KA-15S",
       precio: 149000,
       imagenes: ["resources/images/productos/Instrumentos/ukelele1.jpg"],
@@ -37,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     {
       id: 6,
+      clase:"amplificador",
       nombre: "Amplificador de Guitarra Marshall MG10",
       precio: 649000,
       imagenes: ["resources/images/productos/Instrumentos/ampli1.webp"],
@@ -44,6 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     {
       id: 7,
+      clase:"accesorios",
       nombre: "Audífonos In-Ear Shure SE215",
       precio: 399000,
       imagenes: ["resources/images/productos/Instrumentos/inear1.jpg"],
@@ -51,6 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     {
       id: 8,
+      clase:"accesorios",
       nombre: "Atril para Partituras K&M 18880",
       precio: 129000,
       imagenes: ["resources/images/productos/Instrumentos/atril1.jpg"],
@@ -58,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     {
       id: 9,
+      clase:"accesorios",
       nombre: "Capo Planet Waves NS Pro",
       precio: 39000,
       imagenes: ["resources/images/productos/Instrumentos/capo1.webp"],
@@ -67,6 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 {
     id: 10,
+    clase:"accesorios",
     nombre: "Afinador Digital Korg TM-70T",
     precio: 49000,
     imagenes: ["resources/images/productos/Instrumentos/afinador1.jpg"],
@@ -74,6 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
   },
   {
     id: 11,
+    clase:"accesorios",
     nombre: "Metrónomo Digital Boss DB-30",
     precio: 69000,
     imagenes: ["resources/images/productos/Instrumentos/metro1.webp"],
@@ -81,6 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
   },
   {
     id: 12,
+    clase:"accesorios",
     nombre: "Pedalera Multiefectos Zoom G5",
     precio: 849000,
     imagenes: ["resources/images/productos/Instrumentos/pedal.webp"],
@@ -88,6 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
   },
   {
     id: 13,
+   clase:"sonido",
     nombre: "Interface de Audio Focusrite Scarlett 2i2",
     precio: 599000,
     imagenes: ["resources/images/productos/Instrumentos/tarjeta1.jpg"],
@@ -95,6 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
   },
   {
     id: 14,
+    clase:"software",
     nombre: "Software de Producción Musical Ableton Live Lite",
     precio: 349000,
     imagenes: ["resources/images/productos/Instrumentos/ableton.webp"],
@@ -102,6 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
   },
   {
     id: 15,
+    clase:"microfonos",
     nombre: "Micrófono de Condensador Behringer C-1U",
     precio: 149000,
     imagenes: ["resources/images/productos/Instrumentos/micro1.png"],
@@ -109,6 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
   },
   {
     id: 16,
+    clase:"sonido",
     nombre: "Audífonos de Estudio Beyerdynamic DT770 Pro",
     precio: 699000,
     imagenes: ["resources/images/productos/Instrumentos/audifonos1.jpg"],
@@ -116,6 +150,7 @@ document.addEventListener('DOMContentLoaded', function() {
   },
   {
     id: 17,
+    clase:"sonido",
     nombre: "Monitores de Estudio Yamaha HS7",
     precio: 2399000,
     imagenes: ["resources/images/productos/Instrumentos/monitor1.webp"],
@@ -123,6 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
   },
   {
     id: 18,
+    clase:"software",
     nombre: "Software de Partituras Sibelius",
     precio: 399000,
     imagenes: ["resources/images/productos/Instrumentos/software1.png"],
@@ -130,6 +166,7 @@ document.addEventListener('DOMContentLoaded', function() {
   },
   {
     id: 19,
+    clase:"teoria",
     nombre: "Curso de Guitarra para Principiantes",
     precio: 199000,
     imagenes: ["resources/images/productos/Instrumentos/curso.webp"],
@@ -139,6 +176,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   {
     id: 20,
+    clase:"teoria",
     nombre: "Libro de Teoría Musical para Principiantes",
     precio: 89000,
     imagenes: ["resources/images/productos/Instrumentos/libro1.webp"],
@@ -146,6 +184,7 @@ document.addEventListener('DOMContentLoaded', function() {
   },
   {
     id: 21,
+   clase:"repuestos",
     nombre: "Diapasón de Guitarra",
     precio: 15000,
     imagenes: ["resources/images/productos/Instrumentos/diapason1.webp"],
@@ -153,6 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
   },
   {
     id: 22,
+    clase:"accesorios",
     nombre: "Púa de Bajo Dunlop Tortex 1.14mm",
     precio: 5000,
     imagenes: ["resources/images/productos/Instrumentos/pua1.jpg"],
@@ -160,6 +200,7 @@ document.addEventListener('DOMContentLoaded', function() {
   },
   {
     id: 23,
+    clase:"accesorios",
     nombre: "Correa de Guitarra Fender Nylon",
     precio: 39000,
     imagenes: ["resources/images/productos/Instrumentos/correa1.webp"],
@@ -167,6 +208,7 @@ document.addEventListener('DOMContentLoaded', function() {
   },
   {
     id: 24,
+    clase:"accesorios",
     nombre: "Capo Transpositor D'Addario Planet Waves NS Capo",
     precio: 49000,
     imagenes: ["resources/images/productos/Instrumentos/capo2.jpg"],
@@ -174,6 +216,7 @@ document.addEventListener('DOMContentLoaded', function() {
   },
   {
     id: 25,
+    clase:"accesorios",
     nombre: "Afinador de Guitarra Clip Korg Pitchclip 2",
     precio: 59000,
     imagenes: ["resources/images/productos/Instrumentos/afinador2.jpg"],
@@ -181,6 +224,7 @@ document.addEventListener('DOMContentLoaded', function() {
   },
   {
     id: 26,
+    clase:"accesorios",
     nombre: "Soporte para Guitarra Hercules Stands GS0032B",
     precio: 99000,
     imagenes: ["resources/images/productos/Instrumentos/soporte1.jpg"],
@@ -188,6 +232,7 @@ document.addEventListener('DOMContentLoaded', function() {
   },
   {
     id: 27,
+    clase:"accesorios",
     nombre: "Funda para Guitarra Gator G-PG-64 Deluxe",
     precio: 149000,
     imagenes: ["resources/images/productos/Instrumentos/funda1.jpg"],
@@ -195,6 +240,7 @@ document.addEventListener('DOMContentLoaded', function() {
   },
   {
     id: 28,
+    clase:"amplificador",
     nombre: "Amplificador de Bajo Ampeg BA-115",
     precio: 1990000,
     imagenes: ["resources/images/productos/Instrumentos/ampli2.jpg"],
@@ -202,6 +248,7 @@ document.addEventListener('DOMContentLoaded', function() {
   },
   {
     id: 29,
+    clase:"instrumento",
     nombre: "Batería Electrónica Roland TD-1KPX",
     precio: 2499000,
     imagenes: ["resources/images/productos/Instrumentos/bateria2.webp"],
@@ -210,6 +257,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   {
     id: 31,
+    clase:"accesorios",
     nombre: "Plectro para Guitarra Acústica Dunlop 1.14mm",
     precio: 3000,
     imagenes: ["resources/images/productos/Instrumentos/pua2.webp"],
@@ -217,6 +265,7 @@ document.addEventListener('DOMContentLoaded', function() {
   },
   {
     id: 32,
+    clase:"accesorios",
     nombre: "Soporte para Guitarra K&M 18820",
     precio: 199000,
     imagenes: ["resources/images/productos/Instrumentos/soporte2.webp"],
@@ -224,6 +273,7 @@ document.addEventListener('DOMContentLoaded', function() {
   },
   {
     id: 33,
+    clase:"accesorios",
     nombre: "Fundas para Instrumento Gator G-PG-60",
     precio: 149000,
     imagenes: ["resources/images/productos/Instrumentos/funda2.webp"],
@@ -231,6 +281,7 @@ document.addEventListener('DOMContentLoaded', function() {
   },
   {
     id: 34,
+    clase:"repuestos",
     nombre: "Diapasón para Guitarra Fender American Standard",
     precio: 299000,
     imagenes: ["resources/images/productos/Instrumentos/diapason2.webp"],
@@ -238,6 +289,7 @@ document.addEventListener('DOMContentLoaded', function() {
   },
   {
     id: 35,
+    clase:"repuestos",
     nombre: "Cuerdas para Guitarra Eléctrica D'Addario NYXL0949",
     precio: 25000,
     imagenes: ["resources/images/productos/Instrumentos/cuerdas1.webp"],
@@ -246,6 +298,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   {
     id: 37,
+    clase:"accesorios",
     nombre: "Afinador de Guitarra Clip Korg Pitchclip 2",
     precio: 59000,
     imagenes: ["resources/images/productos/Instrumentos/afinador3.jpg"],
@@ -253,13 +306,15 @@ document.addEventListener('DOMContentLoaded', function() {
   },
   {
     id: 38,
+    clase:"accesorios",
     nombre: "Capo Planet Waves NS Deluxe",
     precio: 69000,
-    imagenes: ["resources/images/productos/Instrumentos/CapoPlanetWavesDeluxe1.jpg"],
+    imagenes: ["resources/images/productos/Instrumentos/capo3.jpg"],
     descripcion: "Un capo Planet Waves NS Deluxe, hecho de materiales de alta calidad y con un diseño ergonómico."
   },
   {
     id: 39,
+    clase:"accesorios",
     nombre: "Púa Dunlop Tortex Flow 1.0mm",
     precio: 4000,
     imagenes: ["resources/images/productos/Instrumentos/PlectroDunlopFlow1.jpg"],
@@ -267,6 +322,7 @@ document.addEventListener('DOMContentLoaded', function() {
   },
   {
     id: 40,
+    clase:"accesorios",
     nombre: "Soporte para Partituras Manfrotto MSB2311B",
     precio: 99000,
     imagenes: ["resources/images/productos/Instrumentos/SoportePartiturasManfrotto1.jpg"],
@@ -277,6 +333,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   {
     id: 41,
+    clase:"accesorios",
     nombre: "Soporte para Guitarra Hercules GS525B",
     precio: 199000,
     imagenes: ["resources/images/productos/Instrumentos/SoporteGuitarraHercules1.jpg"],
@@ -284,6 +341,7 @@ document.addEventListener('DOMContentLoaded', function() {
   },
   {
     id: 42,
+    clase:"accesorios",
     nombre: "Púa de Bajo Dunlop Tortex 1.14mm",
     precio: 5000,
     imagenes: ["resources/images/productos/Instrumentos/PúaBajoDunlop1.jpg"],
@@ -291,6 +349,7 @@ document.addEventListener('DOMContentLoaded', function() {
   },
   {
     id: 43,
+    clase:"accesorios",
     nombre: "Correa de Guitarra Fender Classic Monogram",
     precio: 79000,
     imagenes: ["resources/images/productos/Instrumentos/CorreaGuitarraFender1.jpg"],
@@ -298,6 +357,7 @@ document.addEventListener('DOMContentLoaded', function() {
   },
   {
     id: 44,
+    clase:"accesorios",
     nombre: "Capo de Guitarra Dunlop Ultimate Capo",
     precio: 69000,
     imagenes: ["resources/images/productos/Instrumentos/CapoDunlop1.jpg"],
@@ -305,6 +365,7 @@ document.addEventListener('DOMContentLoaded', function() {
   },
   {
     id: 45,
+    clase:"accesorios",
     nombre: "Afinador de Guitarra Planet Waves NS Clip-On",
     precio: 34000,
     imagenes: ["resources/images/productos/Instrumentos/AfinadorPlanetWaves1.jpg"],
@@ -312,6 +373,7 @@ document.addEventListener('DOMContentLoaded', function() {
   },
   {
     id: 46,
+    clase:"accesorios",
     nombre: "Metrónomo Digital Korg TM-60",
     precio: 49000,
     imagenes: ["resources/images/productos/Instrumentos/MetronomoKorg1.jpg"],
@@ -319,6 +381,7 @@ document.addEventListener('DOMContentLoaded', function() {
   },
   {
     id: 47,
+    clase:"accesorios",
     nombre: "Pedalera Multiefectos Boss GT-100",
     precio: 1249000,
     imagenes: ["resources/images/productos/Instrumentos/PedaleraBoss1.jpg"],
@@ -326,6 +389,7 @@ document.addEventListener('DOMContentLoaded', function() {
   },
   {
     id: 48,
+    clase:"sonido",
     nombre: "Interface de Audio PreSonus AudioBox USB 96",
     precio: 449000,
     imagenes: ["resources/images/productos/Instrumentos/InterfacePreSonus1.jpg"],
@@ -334,30 +398,167 @@ document.addEventListener('DOMContentLoaded', function() {
 
     
 ];
-const productosContainer = document.getElementById('productos-container');
 
-productos.forEach(producto => {
-  const productoElement = document.createElement('div');
-  productoElement.classList.add('producto');
 
-  const imagenElement = document.createElement('img');
-  imagenElement.src = producto.imagenes[0]; 
-  imagenElement.alt = producto.nombre;
+const productosPorPagina = 15;
+  let paginaActual = 1;
+  const carrito = [];
 
-  const nombreElement = document.createElement('h3');
-  nombreElement.textContent = producto.nombre;
+  // Función para formatear precios
+  function formatearPrecio(precio) {
+    return precio.toLocaleString('es-CO', { style: 'currency', currency: 'COP' });
+  }
 
-  const precioElement = document.createElement('p');
-  precioElement.textContent = `Precio: $${producto.precio}`;
+  function actualizarCarrito() {
+    const carritoLista = document.getElementById('carrito-lista');
+    const carritoTotal = document.getElementById('carrito-total');
+  
+    carritoLista.innerHTML = '';
+    let total = 0;
+  
+    carrito.forEach(producto => {
+      const carritoItem = document.createElement('li');
+  
+      const nombrePrecioElement = document.createElement('span');
+      nombrePrecioElement.innerHTML = `<strong>${producto.nombre}</strong> - <span class="precio">${formatearPrecio(producto.precio)}</span>`;
+  
+      const eliminarButton = document.createElement('button');
+      eliminarButton.textContent = 'Eliminar';
+      eliminarButton.addEventListener('click', () => {
+        eliminarDelCarrito(producto);
+      });
+  
+      carritoItem.appendChild(nombrePrecioElement);
+      carritoItem.appendChild(document.createElement('br')); 
+      carritoItem.appendChild(eliminarButton);
+      
+  
+      carritoLista.appendChild(carritoItem);
+      total += producto.precio;
+    });
+  
+    carritoTotal.textContent = `Total: ${formatearPrecio(total)}`;
+  }
+  
+  function eliminarDelCarrito(producto) {
+    const index = carrito.indexOf(producto);
+    if (index !== -1) {
+      carrito.splice(index, 1);
+      actualizarCarrito();
+    }
+  }
 
-  const descripcionElement = document.createElement('p');
-  descripcionElement.textContent = producto.descripcion;
+  function agregarAlCarrito(producto) {
+    carrito.push(producto);
+    actualizarCarrito();
+  }
 
-  productoElement.appendChild(imagenElement);
-  productoElement.appendChild(nombreElement);
-  productoElement.appendChild(precioElement);
-  productoElement.appendChild(descripcionElement);
+  function mostrarPagina(pagina) {
+    const inicio = (pagina - 1) * productosPorPagina;
+    const fin = inicio + productosPorPagina;
+    const productosPagina = productos.slice(inicio, fin);
 
-  productosContainer.appendChild(productoElement);
-});
+    const productosContainer = document.getElementById('productos-container');
+    productosContainer.innerHTML = '';
+
+    productosPagina.forEach(producto => {
+      const productoElement = document.createElement('div');
+      productoElement.classList.add('producto');
+
+      const imagenElement = document.createElement('img');
+      imagenElement.src = producto.imagenes[0];
+      imagenElement.alt = producto.nombre;
+
+      const nombreElement = document.createElement('h3');
+      nombreElement.textContent = producto.nombre;
+
+      const precioElement = document.createElement('p');
+      precioElement.textContent = `Precio: ${formatearPrecio(producto.precio)}`;
+
+      const descripcionElement = document.createElement('p');
+      descripcionElement.textContent = producto.descripcion;
+
+      const agregarButton = document.createElement('button');
+      agregarButton.textContent = 'Agregar al Carrito';
+      agregarButton.addEventListener('click', () => {
+        agregarAlCarrito(producto);
+      });
+
+      productoElement.appendChild(imagenElement);
+      productoElement.appendChild(nombreElement);
+      productoElement.appendChild(precioElement);
+      productoElement.appendChild(descripcionElement);
+      productoElement.appendChild(agregarButton);
+
+      productosContainer.appendChild(productoElement);
+    });
+  }
+
+  function mostrarPaginacion() {
+    const paginacionContainer = document.getElementById('paginacion-container');
+    paginacionContainer.innerHTML = '';
+    const totalPaginas = Math.ceil(productos.length / productosPorPagina);
+
+    for (let i = 1; i <= totalPaginas; i++) {
+      const button = document.createElement('button');
+      button.textContent = i;
+      if (i === paginaActual) {
+        button.classList.add('active');
+      }
+      button.addEventListener('click', () => {
+        paginaActual = i;
+        mostrarPagina(paginaActual);
+        mostrarPaginacion();
+      });
+      paginacionContainer.appendChild(button);
+    }
+  }
+
+  function vaciarCarrito() {
+    carrito.length = 0; // Vaciar el arreglo del carrito
+    actualizarCarrito(); // Actualizar la visualización del carrito
+    mostrarAvisoCompra(); // Mostrar el aviso de compra
+  }
+
+  function mostrarAvisoCompra() {
+    alert("¡Compra realizada con éxito! Gracias por su compra");
+  }
+
+  // Event listener para el botón "Comprar"
+  const comprarButton = document.getElementById('comprar-button');
+  comprarButton.addEventListener('click', vaciarCarrito);
+
+  // Mostrar los productos al cargar la página
+  mostrarPagina(paginaActual);
+  mostrarPaginacion();
+
+  // Manejar el envío del formulario
+  const nuevoProductoForm = document.getElementById('nuevo-producto-form');
+  nuevoProductoForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const clase = document.getElementById('clase').value;
+    const nombre = document.getElementById('nombre').value;
+    const precio = parseFloat(document.getElementById('precio').value);
+    const imagenes = document.getElementById('imagenes').value.split(',').map(imagen => imagen.trim());
+    const descripcion = document.getElementById('descripcion').value;
+
+    const nuevoProducto = {
+      id: productos.length + 1, // Generar un nuevo id único
+      clase,
+      nombre,
+      precio,
+      imagenes,
+      descripcion
+    };
+
+    productos.push(nuevoProducto);
+    mostrarPagina(paginaActual);
+    mostrarPaginacion();
+
+    // Limpiar el formulario
+    nuevoProductoForm.reset();
+    alert("Se agrego el producto mi papa :D");
+  });
+  
 });
