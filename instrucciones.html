@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <link rel="shortcut icon" href="resources/logos/mini.png" />
+    <title>Proyecto</title>
+    <link rel='stylesheet' href='styles.css'>
+    <header>
+        <div class="slogan">Todo lo que tu artista interior necesita</div>
+        <div class="inicio">
+            <div class="logo-inicio">
+                <img src="resources/logos/nombresinfondoinicioa.png" class="logo-inicio" alt="Logo" />
+            </div>
+            <div class="menu-inicio">
+                <ul class="lista-inicio">
+
+                    <li class="opciones-lista-inicio"> <a href="productos.html" id="ProductosLink"
+                            class="aa">Productos</a></li>
+                    <li class="opciones-lista-inicio"> <a href="index.html" id="indexLink" class="aa">Inicio</a></li>
+
+                </ul>
+            </div>
+
+
+        </div>
+
+    </header>
+</head>
+
+<body>
+<div class="Instrucciones-registro">
+<h1>COMO REGISTRAR PRODUCTOS</h1>
+<H2>Propiedad categoria</H2>
+    <p> En esta seccion vamos a digitar la categoria del producto, que puede ser:</p>
+    <ul class="categorias-posibles">
+        <li>Instrumento</li>
+        <li>Amplificador</li>
+        <li>Accesorios</li>
+        <li>Repuestos</li>
+        <li>Teoria</li>
+        <li>Software</li>
+        <li>Sonido</li>
+    </ul>
+    <H2>Propiedad Codigo</H2>
+    <p>En esta seccion introducimos un codigo alfanumerico de no más de 6 caracteres, de preferencia el formato usado en la pagina es por ejemplo:
+    </p>
+    <p><img src="resources/images/img/Ins.png" alt="">
+        <H2>Propiedad Nombre</H2>
+        <p>Aqui Introduciremos el nombre de nuestro producto(No puede tener una longitud mayor a 20 caracteres)</p>
+        <H2>Propiedad Color</H2>
+        <p>Aqui digitaremos el color del producto, en caso de que el producto sea de categoria software o teoria este campo se dejara vacio.</p>
+        <H2>Propiedad Precio</H2>
+        <p>En este campo vamos a escribir el precio sin puntos o comas, ya que el programa posteriormente se encarga de ajustar el formato a pesos</p>
+        <H2>Propiedad Imagen</H2>
+        <p>En este campo escribiremos el nombre de la imagen que deseamos añadir con su extension(jpg, png o webp).</p>
+        <H2>Propiedad Descripción</H2>
+        <p>Vamos a dar una descripcion clara de nuestro producto</p>
+        <br>
+        <h1 class="advertencia">TODOS LOS CAMPOS DEBEN SER LLENADOS, MENOS LA EXCEPCION EXPLICADA ANTERIORMENTE</h1>
+        <br>
+        <h1>Funcionamiento del apartado "buscar"</h1>
+        <p>En Zeint, hemos diseñado nuestra plataforma para que sea fácil y agradable encontrar y comprar tus instrumentos musicales favoritos. Aquí te explicamos cómo puedes utilizar nuestras funciones:</p>
+        <h2>Filtrar por Precio</h2>
+        <div class="botones">
+            <button id="btn-menor-500000" class="opcion-busqueda">Menos de $500,000</button>
+            <button id="btn-500000-1000000" class="opcion-busqueda">$500,000 - $1,000,000</button>
+            <button id="btn-mayor-1000000" class="opcion-busqueda">Más de $1,000,000</button>
+        </div>
+        <p>Usa estos botones para filtrar los productos según su precio. Por ejemplo, si estás buscando productos que cuesten menos de $500,000, simplemente haz clic en el botón "Menos de $500,000" y se mostrarán todos los productos en ese rango de precio.</p>
+        <h2>Buscar Productos</h2>
+        <input type="text" id="search-input" placeholder="Buscar productos..." class="busqueda">
+        <p>¿Tienes algo específico en mente? Utiliza la barra de búsqueda para encontrar productos por su nombre. A medida que escribes, la lista de productos se actualizará automáticamente para mostrar sólo aquellos que coincidan con tu búsqueda. Esta función también respeta el filtro de precio que hayas seleccionado, mostrando solo los productos dentro del rango de precio y que coincidan con tu búsqueda.</p>
+        <h2>Explora y Disfruta</h2>
+        <p>Explora nuestra amplia gama de productos, encuentra el instrumento perfecto para ti y disfruta de la experiencia de compra en Zeint. ¡Estamos aquí para ayudarte en cada paso de tu viaje musical!</p>
+    </div>
+</div>
+
+
+
+    <script src="productos.js"></script>
+
+
+</body>
+
+</html>

@@ -338,3 +338,218 @@ canvas {
     align-items: center;
     
   }
+  .productos-index-container1{
+  display: flex;
+  margin: 7%;
+  }
+.texto-productos-index{
+    margin: 7%;
+    background-color: #e6e6e6;
+    border: #333;
+    border-style: dotted;
+    transition: transform 0.3s; 
+}
+.texto-productos-index:hover{
+   transform: scale(1.02);
+}
+.productos-Index{
+    border: #679170;
+    border-style: double;
+    text-align: center;
+    padding-top: 10px;
+   
+}
+.productos-index-container2{
+    display: flex;
+    margin: 7%;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      th {
+        background-color: #f2f2f2;
+        text-align: left;
+      }
+.titulo-table{
+    background-color: #000000;
+    color: white;
+    border: 3px solid rgb(168, 168, 168);
+}
+
+select {
+    appearance: none; 
+    background-color: #f3f3f3; 
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    padding: 10px 15px; 
+    font-size: 16px; 
+    color: #333; 
+    transition: border-color 0.3s, box-shadow 0.3s; 
+}
+
+
+select:focus {
+    border-color: #007bff; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+    outline: none; 
+}
+
+
+select option {
+    background-color: #fff;
+    color: #333; 
+    padding: 10px; /
+}
+
+
+select option[disabled] {
+    color: #cecece; 
+}
+
+.instrucciones-registro {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.instrucciones-registro h1 {
+    color: #333;
+    border-bottom: 2px solid #166114;
+    padding-bottom: 10px;
+}
+
+.instrucciones-registro h2 {
+    color: rgb(22, 97, 20);
+    margin-top: 20px;
+}
+
+.instrucciones-registro p {
+    margin-bottom: 10px;
+}
+
+.instrucciones-registro ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.instrucciones-registro ul.categorias-posibles li {
+    margin-bottom: 5px;
+}
+
+.instrucciones-registro img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+
+.advertencia {
+    text-align: center;
+    color: #d32f2f;
+    background-color: #f9c1c1;
+    padding: 15px;
+    margin-top: 20px;
+    font-weight: bold;
+    border: 1px solid #d32f2f;
+    border-radius: 8px;
+}
+
+
+
+.opcion-busqueda {
+    background-color: rgb(22, 97, 20); 
+    color: white;
+    padding: 10px 20px; 
+    font-size: 16px; 
+    border: none; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    margin-right: 10px;
+  }
+  
+  
+  .busqueda {
+    padding: 10px; 
+    font-size: 16px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    margin-bottom: 20px; 
+    width: 300px;
+  }
+  .la_busqueda{
+    display: flex; /* Usar flexbox para centrar */
+
+  height: 100px; /* Altura del contenedor (ajústalo según sea necesario) */
+  }
+.texto-busqueda{
+   margin: 0.5%;
+   padding-left: 15%;
+}
+.infor {
+    padding: 40px 20px;
+    background-color: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.infor h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    transition: 1s
+}
+.infor h2:hover{
+    scale: 1.11;
+}
+.informacion_ {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.informacion_ div {
+    flex: 1;
+    min-width: 300px;
+}
+
+.informacion_ p {
+    line-height: 1.6;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.informacion_ img {
+    flex: 1;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .informacion_ {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .informacion_ div, .informacion_ img {
+        max-width: 100%;
+    }
+
+    .informacion_ img {
+        margin-top: 20px;
+    }
+}
